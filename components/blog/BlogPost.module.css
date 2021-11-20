@@ -1,0 +1,59 @@
+.lastPosts {
+  display: flex;
+}
+.lastPosts:nth-child(n + 2) {
+  margin-top: 61px;
+}
+.lastPostImg {
+  min-width: 381px;
+  max-height: 294px;
+}
+.lastPost {
+  margin-left: 30px;
+}
+
+.lastPostListItem {
+  margin-right: 17px;
+}
+
+.lastPostLink {
+  font-weight: 700;
+  font-size: 14px;
+  color: #00c2cb;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+.lastPostLink:hover {
+  text-decoration: underline;
+}
+.lastPostTitle {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f0d0e;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.lastPostDateAuthor {
+  margin-bottom: 45px;
+}
+.lastPostDate {
+  font-size: 12px;
+  color: #888888;
+  font-weight: 400;
+}
+.author {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 12px;
+  color: #000000;
+  font-weight: 700;
+}
+.lastPostText {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #0f0d0e;
+  font-weight: 400;
+  line-height: 1.5;
+}

@@ -7,6 +7,8 @@ interface BlogPostProps {
   date: string;
   author: string;
   description: string;
+  img: string;
+  alt: string;
 }
 
 const BlogPost: React.FC<BlogPostProps> = ({
@@ -15,14 +17,12 @@ const BlogPost: React.FC<BlogPostProps> = ({
   date,
   author,
   description,
+  img,
+  alt,
 }) => {
   return (
     <article className={styles.lastPosts}>
-      <img
-        className={styles.lastPostImg}
-        src="https://cdn.sysaid.com/wp-content/uploads/2021/06/agile700x350.png"
-        alt="Изображение к статье об Agile технологии"
-      />
+      <img className={styles.lastPostImg} src={img} alt={alt} />
 
       <div className={styles.lastPost}>
         <ul className={styles.list}>

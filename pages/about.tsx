@@ -1,18 +1,21 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import { ReactElement } from "react";
-import Layout from "../components/layouts/Layout";
-import styles from "../styles/Home.module.css";
 
-export default function Home() {
+import styles from "../styles/Home.module.css";
+import { useTranslation } from "../hooks/myHooks";
+import Layout from "../components/layouts/Layout";
+
+export default function About() {
+  const { aboutPage } = useTranslation();
+
   return (
-    <div>
-      <div>aboutpage</div>
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <h1>{aboutPage.title}</h1>
+      </main>
     </div>
   );
 }
 
-Home.getLayout = function getLayout(page: ReactElement) {
+About.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };

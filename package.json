@@ -1,5 +1,5 @@
 {
-  "name": "silcode-client",
+  "name": "again-and-again",
   "private": true,
   "scripts": {
     "dev": "next dev",

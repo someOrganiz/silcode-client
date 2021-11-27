@@ -1,16 +1,16 @@
 import React, { ReactElement } from "react";
 import Layout from "../components/common/layouts/Layout";
 
-const SignIn = () => {
+const SignUp = () => {
   return (
-    <div className="">
-      <div>Вход</div>
+    <div>
+      <h1>Регистрация</h1>
     </div>
   );
 };
 
-export default SignIn;
+export default SignUp;
 
-SignIn.getLayout = function getLayout(page: ReactElement) {
+SignUp.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };

@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 
 import { useTranslation } from "../hooks/myHooks";
-import Layout from "../components/layouts/Layout";
+import Layout from "../components/common/layouts/Layout";
 import { useAppSelector } from "../hooks/redux";
 import { userSlice } from "../store/reducers/UserSlice";
 import { useDispatch } from "react-redux";

@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 import styles from "../styles/Home.module.css";
 import { useTranslation } from "../hooks/myHooks";
-import Layout from "../components/layouts/Layout";
+import Layout from "../components/common/layouts/Layout";
 
 export default function About() {
   const { aboutPage } = useTranslation();

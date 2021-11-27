@@ -12,5 +12,17 @@ export default interface ILocale {
     blogPost2: {
       title: string;
     };
+    blogPost3: {
+      title: string;
+    };
+    blogPost4: {
+      title: string;
+    };
+    blogPost5: {
+      title: string;
+    };
+    blogPost6: {
+      title: string;
+    };
   };
 }

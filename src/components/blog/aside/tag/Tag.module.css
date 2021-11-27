@@ -1,0 +1,17 @@
+.tagItem {
+  margin-right: 5px;
+  margin-bottom: 4px;
+}
+.tagLink {
+  display: block;
+  padding: 5px 12px;
+  color: #0f0d0e;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 3px solid #eeeeee;
+}
+.tagLink:hover {
+  border-color: #b59f5b;
+}

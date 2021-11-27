@@ -1,0 +1,12 @@
+.socialIcon {
+  display: block;
+  width: 25px;
+  padding-top: 41px;
+  padding-bottom: 41px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px;
+}
+.socialIconItem:nth-child(n + 2) {
+  margin-left: 25px;
+}

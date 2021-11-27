@@ -13,5 +13,18 @@ export default {
     blogPost2: {
       title: "A completely different article",
     },
+    blogPost3: {
+      title: "Состояние российского рынка AR/VR на 21 год",
+    },
+    blogPost4: {
+      title: "Путин призвал использовать возможности метавселенных",
+    },
+    blogPost5: {
+      title: "Тренды здравоохранения. Настоящее и будущее",
+    },
+    blogPost6: {
+      title:
+        "Миллениалы выбирают онлайн: как диджитал меняет ритейл и банковскую сферу?",
+    },
   },
 } as ILocale;

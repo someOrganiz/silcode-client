@@ -1,5 +1,20 @@
 .header {
-  background-color: aliceblue;
+  background-color: transparent;
   height: 100px;
+  padding: 30px;
   display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px 0 15px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

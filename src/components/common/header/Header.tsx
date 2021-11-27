@@ -1,15 +1,15 @@
 import React from "react";
-import { useAppSelector } from "../../../hooks/redux";
 import styles from "./Header.module.css";
 import NavBar from "./navbar/NavBar";
-import { userSlice } from "../../../store/reducers/UserSlice";
-import { useDispatch } from "react-redux";
+import Logo from "./logo/Logo";
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div>header</div>
-      <NavBar />
+      <div className={styles.container}>
+        <Logo />
+        <NavBar />
+      </div>
     </header>
   );
 };

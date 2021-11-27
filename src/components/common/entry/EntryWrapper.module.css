@@ -1,0 +1,13 @@
+.wrapper {
+  position: relative;
+}
+
+.bgImg {
+  position: relative;
+  width: 100%;
+  /* height: auto; */
+  height: 80vh;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(40%);
+}

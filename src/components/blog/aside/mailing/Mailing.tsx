@@ -6,7 +6,7 @@ import styles from "./Mailing.module.css";
 const Mailing = () => {
   return (
     <div>
-      <AsideTitle title={"Рассылку"} />
+      <AsideTitle title={"Рассылка"} />
       <form className={styles.emailTitle}>
         <label>
           {/* <span className={styles.visuallyHidden}>Поле для ввода e-mail</span> */}

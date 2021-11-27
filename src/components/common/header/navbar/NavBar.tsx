@@ -4,51 +4,42 @@ import { useRouter } from "next/router";
 import React from "react";
 import styles from "./NavBar.module.css";
 import Link from "next/link";
+import LocaleSelect from "./LocaleSelect";
 
 const NavBar = () => {
-  const router = useRouter();
-  const { locale } = router;
-
-  const changeLanguage = (e) => {
-    const locale = e.target.value;
-    const shallow = true;
-    router.push(router.pathname, router.asPath, { locale });
-  };
-
   return (
-    <>
-      <ul className={styles.nav}>
-        <li>
-          <Link href="/" locale={locale}>
-            <a>Home</a>
+    <nav>
+      <ul className={styles.list}>
+        <li className={styles.menuListItem}>
+          <Link href="/">
+            <a className={styles.menuLink}>Курсы</a>
           </Link>
         </li>
-        <li>
-          <Link href="/blog" locale={locale}>
-            <a>Blog</a>
+        <li className={styles.menuListItem}>
+          <Link href="/">
+            <a className={styles.menuLink}>Блог</a>
           </Link>
         </li>
-        <li>
-          <Link href="/about" locale={locale}>
-            <a>About</a>
+        <li className={styles.menuListItem}>
+          <Link href="/">
+            <a className={styles.menuLink}>Контакты</a>
           </Link>
         </li>
-        <li>
-          <select
-            onChange={changeLanguage}
-            defaultValue={locale}
-            className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
-          >
-            <option className="text-black" value="ru">
-              RU
-            </option>
-            <option className="text-black" value="en">
-              EN
-            </option>
-          </select>
+        <li className={styles.menuListItem}>
+          <Link href="/">
+            <a className={styles.menuLink}>Войти</a>
+          </Link>
+        </li>
+        <li className={styles.menuListItem}>
+          <Link href="/">
+            <a className={styles.menuLink}>Регистрация</a>
+          </Link>
+        </li>
+        <li className={styles.menuListItem}>
+          <LocaleSelect />
         </li>
       </ul>
-    </>
+    </nav>
   );
 };
 

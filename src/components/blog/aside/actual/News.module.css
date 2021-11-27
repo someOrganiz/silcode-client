@@ -25,3 +25,9 @@
   text-transform: uppercase;
   margin: 0;
 }
+
+.news:hover,
+.newTitle:hover {
+  cursor: pointer;
+  color: #00c2cb;
+}

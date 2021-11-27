@@ -1,8 +1,20 @@
-.nav {
+.list {
+  list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+}
+.menuListItem:nth-child(n + 2) {
+  margin-left: 35px;
 }
 
-.nav li {
-  margin-left: 100px;
+.menuLink {
+  font-weight: 400;
+  font-size: 13px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menuLink:hover {
+  text-decoration: underline;
 }

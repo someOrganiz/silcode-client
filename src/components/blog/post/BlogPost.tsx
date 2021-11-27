@@ -21,31 +21,35 @@ const BlogPost: React.FC<BlogPostProps> = ({
   alt,
 }) => {
   return (
-    <article className={styles.lastPosts}>
-      <img className={styles.lastPostImg} src={img} alt={alt} />
+    <article className={styles.article}>
+      <img className={styles.postImg} src={img} alt={alt} />
 
-      <div className={styles.lastPost}>
+      <div className={styles.post}>
         <ul className={styles.list}>
           {tags.map((tag) => (
-            <li className={styles.lastPostListItem} key={tag}>
-              <a className={styles.lastPostLink} href="#0">
+            <li className={styles.postListItem} key={tag}>
+              <a className={styles.postLink} href="#0">
                 {tag}
               </a>
             </li>
           ))}
         </ul>
-        <h2 className={styles.lastPostTitle}>
+        <h2 className={styles.postTitle}>
           <a href="#0" className={styles.link}>
             {title}
           </a>
         </h2>
-        <div className={styles.lastPostDateAuthor}>
-          <time className={styles.lastPostDate} dateTime="01-11-2021">
+        <div className={styles.postDateAuthor}>
+          <time className={styles.postDate} dateTime="01-11-2021">
             {date}
           </time>
           <span className={styles.author}>Автор: {author}</span>
         </div>
-        <p className={styles.lastPostText}>{description}</p>
+        <p className={styles.postText}>
+          {description.length > 150
+            ? description.slice(0, 150) + "..."
+            : description}
+        </p>
       </div>
     </article>
   );

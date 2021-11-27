@@ -1,22 +1,33 @@
-.lastPosts {
+.article {
   display: flex;
+  padding: 30px;
+  cursor: pointer;
+  transition: linear 0.18s;
 }
-.lastPosts:nth-child(n + 2) {
-  margin-top: 61px;
+.article:nth-child(n + 2) {
+  margin-top: 15px;
 }
-.lastPostImg {
+
+.article:hover {
+  transition: linear 0.15s;
+  transform: scale(1.05);
+  -webkit-box-shadow: 0px 4px 15px 2px rgba(34, 60, 80, 0.13);
+  -moz-box-shadow: 0px 4px 15px 2px rgba(34, 60, 80, 0.13);
+  box-shadow: 0px 4px 15px 2px rgba(34, 60, 80, 0.13);
+}
+.postImg {
   min-width: 381px;
   max-height: 294px;
 }
-.lastPost {
+.post {
   margin-left: 30px;
 }
 
-.lastPostListItem {
+.postListItem {
   margin-right: 17px;
 }
 
-.lastPostLink {
+.postLink {
   font-weight: 700;
   font-size: 14px;
   color: #00c2cb;
@@ -24,10 +35,10 @@
   text-transform: uppercase;
   vertical-align: top;
 }
-.lastPostLink:hover {
+.postLink:hover {
   text-decoration: underline;
 }
-.lastPostTitle {
+.postTitle {
   margin-bottom: 25px;
   font-size: 20px;
   font-weight: 700;
@@ -35,10 +46,10 @@
   text-transform: uppercase;
   line-height: 1.2;
 }
-.lastPostDateAuthor {
+.postDateAuthor {
   margin-bottom: 45px;
 }
-.lastPostDate {
+.postDate {
   font-size: 12px;
   color: #888888;
   font-weight: 400;
@@ -50,7 +61,7 @@
   color: #000000;
   font-weight: 700;
 }
-.lastPostText {
+.postText {
   margin-bottom: 10px;
   font-size: 15px;
   color: #0f0d0e;

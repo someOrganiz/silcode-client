@@ -7,7 +7,6 @@ const Actual = () => {
   return (
     <section className={styles.section}>
       <AsideTitle title={"Актуальное"} />
-      {/* <h3 className={styles.asideTitle}>Актуальное</h3> */}
       <News
         img={
           "https://leonardo.osnova.io/8f349a93-a6a1-52b5-a4f1-ff62a7494ce1/-/preview/1800/"

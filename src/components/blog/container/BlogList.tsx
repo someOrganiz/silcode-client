@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "../../../hooks/myHooks";
 import BlogPost from "../post/BlogPost";
-import styles from "./BlogPostContainer.module.css";
+import styles from "./BlogList.module.css";
 
 const BlogPostContainer = () => {
   const { blogPage } = useTranslation();

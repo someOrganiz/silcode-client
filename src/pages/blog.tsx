@@ -4,7 +4,7 @@ import Layout from "../components/layouts/Layout";
 import BlogPost from "../components/blog/BlogPost";
 import { useTranslation } from "../hooks/myHooks";
 
-export default function Home() {
+export default function Blog() {
   const { blogPage } = useTranslation();
   return (
     <div>
@@ -42,6 +42,6 @@ export default function Home() {
   );
 }
 
-Home.getLayout = function getLayout(page: ReactElement) {
+Blog.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };

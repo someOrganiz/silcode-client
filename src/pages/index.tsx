@@ -1,15 +1,22 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 
 import { useTranslation } from "../hooks/myHooks";
 import Layout from "../components/layouts/Layout";
+import { useAppSelector } from "../hooks/redux";
+import { userSlice } from "../store/reducers/UserSlice";
+import { useDispatch } from "react-redux";
 
 export default function Home() {
   const t = useTranslation();
+  const [counter, setCounter] = useState(0);
+  const handleClick = () => {
+    setCounter(counter + 1);
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -20,8 +27,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1>{t.homePage.title}</h1>
+        <button onClick={handleClick}>Increment</button>
       </main>
-
+      <h1>Counter is:{counter}</h1>
       <footer className={styles.footer}>Мой футер</footer>
     </div>
   );

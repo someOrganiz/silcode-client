@@ -3,31 +3,10 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .menuListItem {
   transition: linear 0.3s;
-}
-
-.menuListItem:nth-child(n + 2) {
+  position: relative;
+  height: 30px;
   margin-left: 35px;
-}
-
-.menuLink {
-  font-weight: 400;
-  font-size: 13px;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.menuLinkBlack {
-  font-weight: 400;
-  font-size: 13px;
-  color: #222;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.menuListItem:hover {
-  transition: linear 0.3s;
-  transition: linear 0.15s;
-  transform: scale(1.2);
 }

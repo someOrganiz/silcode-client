@@ -1,0 +1,94 @@
+.text {
+  padding: 10px;
+}
+
+.descr {
+  width: 600px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+}
+.descr::before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 550px;
+  height: 200px;
+  border: 2px solid #00c2cb;
+  transform: rotate(25deg) scaleX(-1);
+}
+
+.descr::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  border: 2px solid #00c2cb;
+  transform: rotate(50deg) scaleX(2);
+}
+
+.descrKhaki {
+  width: 600px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+}
+.descrKhaki::before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+  height: 300px;
+  border: 2px solid #b59f5b;
+  transform: rotate(70deg) scaleX(-1);
+}
+.descrKhaki::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #b59f5b;
+  right: 0;
+  transform: rotate(45deg) scaleX(-1);
+}
+
+.descrSecBlue {
+  width: 600px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+}
+.descrSecBlue::before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #00c2cb;
+  transform: rotate(130deg) scale(2);
+}
+.descrSecBlue::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #00c2cb;
+  transform: rotate(130deg) scale(2);
+}

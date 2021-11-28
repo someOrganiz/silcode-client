@@ -1,0 +1,33 @@
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.wrapper {
+  align-self: center;
+  background-color: white;
+  margin: 0;
+  width: 35%;
+  border-radius: 15px;
+}
+
+.form p {
+  align-self: center;
+  font-size: 32px;
+  color: #555;
+  text-align: center;
+  /* margin: 0; */
+  margin: 8px 0 16px 0;
+}
+
+.form input {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.form button {
+  margin-top: 10px;
+}

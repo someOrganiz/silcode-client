@@ -1,0 +1,17 @@
+.select {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.selectBlack {
+  background-color: transparent;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.option {
+  color: black;
+}

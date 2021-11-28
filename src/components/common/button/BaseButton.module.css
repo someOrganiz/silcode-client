@@ -1,0 +1,28 @@
+.baseButton {
+  height: 40px;
+  width: 200px;
+
+  background-color: white;
+  border: 1px solid #888;
+  color: #444;
+  border-radius: 1px;
+  border-radius: 0px;
+  align-self: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s linear;
+  outline: none;
+  height: 35px;
+}
+
+.baseButton:hover {
+  background-color: #eee;
+  transition: all 0.2s linear;
+}
+
+.baseButton:focus {
+  transition: 0s;
+  outline: none;
+  border: 2px solid #b59f5b;
+  border-radius: 1px;
+}

@@ -3,6 +3,7 @@ import BaseButton from "../../common/button/BaseButton";
 import BaseInput from "../../common/input/BaseInput";
 import styles from "./SignForm.module.css";
 import { useRouter } from "next/router";
+import { SIGNIN } from "../../../utils/routes";
 
 interface SignFormProps {
   pseudo?: boolean;
@@ -19,7 +20,7 @@ const SignForm: React.FC<SignFormProps> = ({ pseudo }) => {
       {/* {error && <ErrorDiv mes={error} />} */}
       {/* {isLoading && <p>ЗАГРУЗКА</p>} */}
       <div className={styles.wrapper}>
-        <p>вход</p>
+        <p>{router.pathname === SIGNIN ? "Войти" : "Регистрация"}</p>
       </div>
 
       <BaseInput

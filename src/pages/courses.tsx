@@ -1,16 +1,17 @@
 import React, { ReactElement } from "react";
-import Layout from "../components/common/layouts/Layout";
+import FHLayout from "../components/common/layouts/HFLayout";
+import CoursesEntry from "../components/courses/entry/CoursesEntry";
 
 const Courses = () => {
   return (
-    <div>
-      <h1>courses</h1>
-    </div>
+    <main>
+      <CoursesEntry />
+    </main>
   );
 };
 
 export default Courses;
 
 Courses.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
+  return <FHLayout>{page}</FHLayout>;
 };

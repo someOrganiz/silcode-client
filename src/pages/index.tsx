@@ -6,10 +6,11 @@ import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 
 import { useTranslation } from "../hooks/myHooks";
-import Layout from "../components/common/layouts/Layout";
+import FHLayout from "../components/common/layouts/HFLayout";
 import { useAppSelector } from "../hooks/redux";
 import { userSlice } from "../store/reducers/UserSlice";
 import { useDispatch } from "react-redux";
+import HomeEntry from "../components/home/HomeEntry";
 
 export default function Home() {
   const t = useTranslation();
@@ -26,15 +27,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>{t.homePage.title}</h1>
-        <button onClick={handleClick}>Increment</button>
+        <HomeEntry />
       </main>
-      <h1>Counter is:{counter}</h1>
-      <footer className={styles.footer}>Мой футер</footer>
     </div>
   );
 }
 
 Home.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
+  return <FHLayout>{page}</FHLayout>;
 };

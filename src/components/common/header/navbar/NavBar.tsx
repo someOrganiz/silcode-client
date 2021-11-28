@@ -1,46 +1,44 @@
-import { GetStaticProps } from "next";
-import { getCookieParser } from "next/dist/server/api-utils";
-import { useRouter } from "next/router";
 import React from "react";
 import styles from "./NavBar.module.css";
 import Link from "next/link";
 import LocaleSelect from "./LocaleSelect";
-import {
-  COURSES,
-  BLOG,
-  CONTACTS,
-  SIGNIN,
-  SIGNUP,
-  ABOUT,
-} from "../../../../utils/routes";
+import { COURSES, BLOG, SIGNIN, SIGNUP, ABOUT } from "../../../../utils/routes";
+import { useRouter } from "next/router";
 
 const NavBar = () => {
+  // я не придумал ничего лучше
+  const router = useRouter();
+  let link;
+  if (router.pathname == SIGNIN || router.pathname == SIGNUP) {
+    link = styles.menuLinkBlack;
+  } else link = styles.menuLink;
+  // ------------------------------
   return (
     <nav>
       <ul className={styles.list}>
         <li className={styles.menuListItem}>
           <Link href={COURSES}>
-            <a className={styles.menuLink}>Курсы</a>
+            <a className={link}>Курсы</a>
           </Link>
         </li>
         <li className={styles.menuListItem}>
           <Link href={BLOG}>
-            <a className={styles.menuLink}>Блог</a>
+            <a className={link}>Блог</a>
           </Link>
         </li>
         <li className={styles.menuListItem}>
           <Link href={ABOUT}>
-            <a className={styles.menuLink}>О нас</a>
+            <a className={link}>О нас</a>
           </Link>
         </li>
         <li className={styles.menuListItem}>
           <Link href={SIGNIN}>
-            <a className={styles.menuLink}>Войти</a>
+            <a className={link}>Войти</a>
           </Link>
         </li>
         <li className={styles.menuListItem}>
           <Link href={SIGNUP}>
-            <a className={styles.menuLink}>Регистрация</a>
+            <a className={link}>Регистрация</a>
           </Link>
         </li>
         <li className={styles.menuListItem}>

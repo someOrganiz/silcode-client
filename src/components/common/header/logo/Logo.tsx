@@ -1,11 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./Logo.module.css";
+import { HOME } from "../../../../utils/routes";
 
 const Logo = () => {
   return (
     <div className={styles.logoContainer}>
-      <Link href="#0">
+      <Link href={HOME}>
         <a>
           <img
             className={styles.logo}

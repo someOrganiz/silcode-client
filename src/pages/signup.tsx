@@ -1,16 +1,18 @@
 import React, { ReactElement } from "react";
-import Layout from "../components/common/layouts/Layout";
+import HLayout from "../components/common/layouts/Hlayout";
+import SignForm from "../components/sign/form/SignForm";
+import styles from "../styles/Sign.module.css";
 
 const SignUp = () => {
   return (
-    <div>
-      <h1>Регистрация</h1>
-    </div>
+    <main className={styles.main}>
+      <SignForm />
+    </main>
   );
 };
 
 export default SignUp;
 
 SignUp.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
+  return <HLayout>{page}</HLayout>;
 };

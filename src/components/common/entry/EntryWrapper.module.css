@@ -1,13 +1,32 @@
 .wrapper {
   position: relative;
+  background-color: #222;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes occur {
+  0% {
+    filter: blur(2px) brightness(40%);
+    transform: scale(1);
+  }
+  50% {
+    filter: blur(1px) brightness(40%);
+  }
+  100% {
+    filter: blur(0px) brightness(40%);
+    transform: scale(1.03);
+  }
 }
 
 .bgImg {
   position: relative;
   width: 100%;
-  /* height: auto; */
   height: 80vh;
   object-fit: cover;
-  object-position: top;
+  background-attachment: fixed;
+  animation-name: occur;
+  animation-duration: 4s;
   filter: brightness(40%);
+  transform: scale(1.03);
 }

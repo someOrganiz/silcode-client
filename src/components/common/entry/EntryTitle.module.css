@@ -10,12 +10,33 @@
 }
 
 .wrapper {
-  max-width: 800px;
+  max-width: 600px;
+}
+
+@keyframes occur {
+  0% {
+    color: transparent;
+    text-shadow: none;
+  }
+  25% {
+    color: white;
+    text-shadow: 1px 1px 1px #eee;
+  }
+  50% {
+    text-shadow: 1px 1px 2px #eee;
+  }
+  100% {
+    text-shadow: 1px 1px 3px #eee;
+  }
 }
 
 .title {
   font-weight: 700;
   font-size: 45px;
   text-align: center;
-  color: white;
+  color: #eee;
+  animation-name: occur;
+  animation-duration: 20s;
+  text-shadow: 1px white;
+  text-shadow: 1px 1px 3px white;
 }

@@ -3,7 +3,7 @@ import { useTranslation } from "../../../hooks/myHooks";
 import BlogPost from "../post/BlogPost";
 import styles from "./BlogList.module.css";
 
-const BlogPostContainer = () => {
+const BlogList = () => {
   const { blogPage } = useTranslation();
   return (
     <div className={styles.main}>
@@ -96,4 +96,4 @@ const BlogPostContainer = () => {
   );
 };
 
-export default BlogPostContainer;
+export default BlogList;

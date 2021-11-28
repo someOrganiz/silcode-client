@@ -15,6 +15,14 @@
   text-transform: uppercase;
 }
 
+.menuLinkBlack {
+  font-weight: 400;
+  font-size: 13px;
+  color: #222;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .menuLink:hover {
   text-decoration: underline;
 }

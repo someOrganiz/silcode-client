@@ -5,6 +5,13 @@
   outline: none;
 }
 
+.selectBlack {
+  background-color: transparent;
+  color: black;
+  border: none;
+  outline: none;
+}
+
 .option {
   color: black;
 }

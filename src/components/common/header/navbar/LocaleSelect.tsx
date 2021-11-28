@@ -12,7 +12,7 @@ const LocaleSelect = () => {
     select = styles.selectkBlack;
   } else select = styles.select;
   // ------------------------------
-  const changeLanguage = (e) => {
+  const changeLanguage = (e: any) => {
     const locale = e.target.value;
     router.push(router.pathname, router.asPath, { locale });
   };

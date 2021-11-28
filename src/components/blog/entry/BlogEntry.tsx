@@ -4,10 +4,7 @@ import EntryTitle from "../../common/entry/EntryTitle";
 
 const BlogEntry = () => {
   return (
-    <EntryWrapper
-      img="https://www.netoneasia.com/wp-content/uploads/2019/08/tech-blog.jpg"
-      alt="blog entry image"
-    >
+    <EntryWrapper img="/BlogPageTech.webp" alt="blog entry image">
       <EntryTitle text="Блог о технологиях, программировании и гаджетах" />
     </EntryWrapper>
   );

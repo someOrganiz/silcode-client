@@ -18,3 +18,16 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.headerBlack {
+  background-color: transparent;
+  height: 100px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  background-color: #222;
+}

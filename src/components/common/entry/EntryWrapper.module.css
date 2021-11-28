@@ -15,7 +15,7 @@
   }
   100% {
     filter: blur(0px) brightness(40%);
-    transform: scale(1.03);
+    transform: scale(1.04);
   }
 }
 
@@ -28,5 +28,5 @@
   animation-name: occur;
   animation-duration: 4s;
   filter: brightness(40%);
-  transform: scale(1.03);
+  transform: scale(1.04);
 }

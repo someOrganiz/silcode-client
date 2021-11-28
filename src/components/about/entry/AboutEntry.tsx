@@ -11,7 +11,7 @@ const AboutEntry: React.FC<AboutEntryProps> = ({}) => {
       img="https://www.acq-intl.com/wp-content/uploads/2020/01/tech-cruve.jpg"
       alt="blog entry image"
     >
-      <EntryTitle text="Очень рады познакомиться. Мы SILCODE" />
+      <EntryTitle text="Очень рады познакомиться. Мы SILCODE. А вы?" />
     </EntryWrapper>
   );
 };

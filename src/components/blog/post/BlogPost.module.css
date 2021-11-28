@@ -18,6 +18,7 @@
 .postImg {
   min-width: 381px;
   max-height: 294px;
+  object-fit: cover;
 }
 .post {
   margin-left: 30px;

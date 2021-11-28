@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { SyntheticEvent } from "react";
 import { SIGNIN, SIGNUP } from "../../../../utils/routes";
 import styles from "./LocaleSelect.module.css";
 

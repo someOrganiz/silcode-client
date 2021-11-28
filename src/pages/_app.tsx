@@ -17,7 +17,7 @@ type AppPropsWithLayout = AppProps & {
 
 const store = setupStore();
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: any) {
   const getLayout = Component.getLayout ?? ((page: NextPage) => page);
 
   return (

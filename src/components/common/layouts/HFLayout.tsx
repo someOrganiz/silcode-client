@@ -2,7 +2,11 @@ import React, { ReactNode } from "react";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
-const FHLayout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const FHLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header />

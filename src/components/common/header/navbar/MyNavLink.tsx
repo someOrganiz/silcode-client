@@ -10,7 +10,6 @@ interface MyNavLinkProps {
 }
 
 const MyNavLink: React.FC<MyNavLinkProps> = ({ text, href }) => {
-  // я не придумал ничего лучше
   const router = useRouter();
   let link, underline;
   if (router.pathname == SIGNIN || router.pathname == SIGNUP) {
@@ -20,7 +19,6 @@ const MyNavLink: React.FC<MyNavLinkProps> = ({ text, href }) => {
     link = styles.menuLink;
     underline = styles.underline;
   }
-  // ------------------------------
 
   return (
     <li className={styles.menuListItem}>

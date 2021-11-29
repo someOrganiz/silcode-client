@@ -1,0 +1,73 @@
+.text {
+  padding: 10px;
+}
+.pseudo {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+.descr {
+  width: 600px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+}
+
+.descr1 {
+  @extend .descr;
+  &::before {
+    @extend .pseudo;
+    width: 550px;
+    height: 200px;
+    border: 2px solid #00c2cb;
+    transform: rotate(25deg) scaleX(-1);
+  }
+  &::after {
+    @extend .pseudo;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    border: 2px solid #00c2cb;
+    transform: rotate(50deg) scaleX(2);
+  }
+}
+.descr2 {
+  @extend .descr;
+  &::before {
+    @extend .pseudo;
+    width: 500px;
+    height: 300px;
+    border: 2px solid #b59f5b;
+    transform: rotate(70deg) scaleX(-1);
+  }
+  &::after {
+    @extend .pseudo;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #b59f5b;
+    right: 0;
+    transform: rotate(45deg) scaleX(-1);
+  }
+}
+
+.descr3 {
+  @extend .descr;
+  &::before {
+    @extend .pseudo;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #00c2cb;
+    transform: rotate(130deg) scale(2);
+  }
+  &::after {
+    @extend .pseudo;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #00c2cb;
+    transform: rotate(130deg) scale(2);
+  }
+}

@@ -1,0 +1,103 @@
+.baseInput {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  height: 40px;
+  border: 1px solid #888;
+  border-radius: 1px;
+  width: 100%;
+  margin: 0;
+}
+
+.baseInput:focus {
+  outline: none;
+  border: 2px solid #b59f5b;
+}
+
+.pseudo {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: 0.45s linear;
+}
+
+.pseudo1 {
+  &::before {
+    @extend .pseudo;
+    width: 250px;
+    height: 200px;
+    border: 2px solid #00c2cb;
+    transform: rotate(143deg) scaleX(-1);
+  }
+  &::after {
+    @extend .pseudo;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    border: 2px solid #00c2cb;
+    transform: rotate(50deg) scaleX(2);
+  }
+}
+
+.pseudo2 {
+  &::before {
+    @extend .pseudo;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #b59f5b;
+    transform: rotate(70deg) scaleX(-1);
+  }
+  &::after {
+    @extend .pseudo;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #b59f5b;
+    transform: rotate(70deg) scaleX(-1);
+  }
+}
+
+.pseudo1err {
+  &::before {
+    @extend .pseudo;
+    width: 250px;
+    height: 200px;
+    border: 2px solid #b55b5b95;
+    transform: rotate(123deg) scaleX(-1);
+  }
+  &::after {
+    @extend .pseudo;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    border: 2px solid #b55b5b95;
+    transform: rotate(30deg) scaleX(2);
+  }
+}
+
+.pseudo2err {
+  &::before {
+    @extend .pseudo;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #b55b5b95;
+    transform: rotate(80deg) scaleX(-1);
+  }
+  &::after {
+    @extend .pseudo;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #b55b5b95;
+    transform: rotate(150deg) scaleX(-1);
+  }
+}

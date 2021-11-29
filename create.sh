@@ -33,7 +33,6 @@ else
 
 	# Creating files
 	# --------------
-
 	touch ""$dir"$name.module.css"
 	touch ""$dir"$name.tsx"
 

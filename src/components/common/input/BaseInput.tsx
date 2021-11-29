@@ -1,27 +1,23 @@
 import React, { CSSProperties, FC, HTMLAttributes } from "react";
-import styles from "./BaseInput.module.css";
+import styles from "./BaseInput.module.scss";
 
 interface InputProps extends HTMLAttributes<HTMLInputElement> {
   name: string;
   type: string;
-  value?: string;
+  value: string;
   pseudo?: number;
+  isError?: string;
+  isLoading?: any;
 }
 
-const BaseInput: FC<InputProps> = ({ type, pseudo, ...rest }) => {
-  let style;
-  if (pseudo)
-    switch (pseudo) {
-      case 1:
-        style = styles.pseudoBlue;
-        break;
-      case 2:
-        style = styles.pseudoKhaki;
-        break;
-      default:
-        style = styles.label;
-        break;
-    }
+const BaseInput: FC<InputProps> = ({
+  type,
+  pseudo,
+  isError: isError,
+  isLoading,
+  ...rest
+}) => {
+  let style = addStyle(pseudo, isError);
 
   return (
     <label className={style}>
@@ -32,3 +28,28 @@ const BaseInput: FC<InputProps> = ({ type, pseudo, ...rest }) => {
 };
 
 export default BaseInput;
+
+function addStyle(pseudo: number | undefined, isError: string | undefined) {
+  let style = !isError ? pseudoStyle(pseudo) : errorStyle(pseudo);
+  return style;
+}
+
+function pseudoStyle(pseudo: number | undefined) {
+  switch (pseudo) {
+    case 1:
+      return styles.pseudo1;
+    case 2:
+      return styles.pseudo2;
+  }
+  return "";
+}
+
+function errorStyle(pseudo: number | undefined) {
+  switch (pseudo) {
+    case 1:
+      return styles.pseudo1err;
+    case 2:
+      return styles.pseudo2err;
+  }
+  return "";
+}

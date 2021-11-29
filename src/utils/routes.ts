@@ -4,7 +4,3 @@ export const COURSES = "/courses";
 export const ABOUT = "/about";
 export const SIGNIN = "/signin";
 export const SIGNUP = "/signup";
-// export const RESTOREPASSWORD = "/restore";
-// export const INFO = "/info";
-// export const CONTACTS = "/contacts";
-// export const PROFILE = "/profile";

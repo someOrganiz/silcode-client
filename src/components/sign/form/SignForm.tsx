@@ -43,33 +43,37 @@ const SignForm: React.FC<SignFormProps> = ({ pseudo }) => {
   }, []);
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <div className={styles.wrapper}>
-        <p>{router.pathname === SIGNIN ? "Войти" : "Регистрация"}</p>
-      </div>
+    <div className={styles.wrapper}>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.enter}>
+          <p>{router.pathname === SIGNIN ? "Войти" : "Регистрация"}</p>
+        </div>
 
-      <BaseInput
-        pseudo={pseudo ? 1 : 0}
-        isError={isError}
-        type="text"
-        name="email"
-        placeholder="e-mail"
-        value={credentials.email}
-        onChange={handleChange}
-      />
-      <BaseInput
-        pseudo={pseudo ? 2 : 0}
-        isError={isError}
-        type="password"
-        name="password"
-        placeholder="пароль"
-        value={credentials.password}
-        onChange={handleChange}
-      />
-      {isError && <div>error</div>}
-      {isLoading && <div>ЗАГРУЗКА</div>}
-      <BaseButton text="Подтвердить" />
-    </form>
+        <BaseInput
+          pseudo={pseudo ? 1 : 0}
+          isError={isError}
+          type="text"
+          name="email"
+          placeholder="e-mail"
+          value={credentials.email}
+          onChange={handleChange}
+        />
+        <BaseInput
+          pseudo={pseudo ? 2 : 0}
+          isError={isError}
+          type="password"
+          name="password"
+          placeholder="пароль"
+          value={credentials.password}
+          onChange={handleChange}
+        />
+        <BaseButton text="Подтвердить" />
+      </form>
+      <div className={styles.status}>
+        {isError && <div>error</div>}
+        {isLoading && <div>loading</div>}
+      </div>
+    </div>
   );
 };
 

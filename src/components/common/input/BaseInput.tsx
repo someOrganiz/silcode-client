@@ -17,12 +17,7 @@ const BaseInput: FC<InputProps> = ({
   isLoading,
   ...rest
 }) => {
-  let style = "";
-  if (!isError) {
-    style = pseudoStyle(pseudo);
-  } else {
-    style = errorStyle(pseudo);
-  }
+  let style = addStyle(pseudo, isError);
 
   return (
     <label className={style}>
@@ -34,24 +29,27 @@ const BaseInput: FC<InputProps> = ({
 
 export default BaseInput;
 
+function addStyle(pseudo: number | undefined, isError: string | undefined) {
+  let style = !isError ? pseudoStyle(pseudo) : errorStyle(pseudo);
+  return style;
+}
+
 function pseudoStyle(pseudo: number | undefined) {
-  if (pseudo)
-    switch (pseudo) {
-      case 1:
-        return styles.pseudo1;
-      case 2:
-        return styles.pseudo2;
-    }
+  switch (pseudo) {
+    case 1:
+      return styles.pseudo1;
+    case 2:
+      return styles.pseudo2;
+  }
   return "";
 }
 
 function errorStyle(pseudo: number | undefined) {
-  if (pseudo)
-    switch (pseudo) {
-      case 1:
-        return styles.pseudo1err;
-      case 2:
-        return styles.pseudo2err;
-    }
+  switch (pseudo) {
+    case 1:
+      return styles.pseudo1err;
+    case 2:
+      return styles.pseudo2err;
+  }
   return "";
 }

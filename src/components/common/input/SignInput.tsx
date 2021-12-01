@@ -1,23 +1,23 @@
 import React, { CSSProperties, FC, HTMLAttributes } from "react";
-import styles from "./BaseInput.module.scss";
+import styles from "./SignInput.module.scss";
 
 interface InputProps extends HTMLAttributes<HTMLInputElement> {
   name: string;
   type: string;
   value: string;
-  pseudo?: number;
-  isError?: string;
+  pseudoStyleType: number;
+  isError: string;
   isLoading?: any;
 }
 
-const BaseInput: FC<InputProps> = ({
+const SignInput: FC<InputProps> = ({
   type,
-  pseudo,
+  pseudoStyleType,
   isError: isError,
   isLoading,
   ...rest
 }) => {
-  let style = addStyle(pseudo, isError);
+  let style = addStyle(pseudoStyleType, isError);
 
   return (
     <label className={style}>
@@ -27,14 +27,14 @@ const BaseInput: FC<InputProps> = ({
   );
 };
 
-export default BaseInput;
+export default SignInput;
 
-function addStyle(pseudo: number | undefined, isError: string | undefined) {
-  let style = !isError ? pseudoStyle(pseudo) : errorStyle(pseudo);
+function addStyle(pseudo: number, isError: string) {
+  let style = isError ? errorStyle(pseudo) : pseudoStyle(pseudo);
   return style;
 }
 
-function pseudoStyle(pseudo: number | undefined) {
+function pseudoStyle(pseudo: number) {
   switch (pseudo) {
     case 1:
       return styles.pseudo1;
@@ -44,7 +44,7 @@ function pseudoStyle(pseudo: number | undefined) {
   return "";
 }
 
-function errorStyle(pseudo: number | undefined) {
+function errorStyle(pseudo: number) {
   switch (pseudo) {
     case 1:
       return styles.pseudo1err;

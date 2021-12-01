@@ -1,6 +1,6 @@
 import React, { FormEventHandler } from "react";
 import BaseButton from "../../common/button/BaseButton";
-import BaseInput from "../../common/input/BaseInput";
+import SignInput from "../../common/input/SignInput";
 import styles from "./SignForm.module.css";
 import { useRouter } from "next/router";
 import { SIGNIN } from "../../../utils/routes";
@@ -8,14 +8,12 @@ import { ICredentials } from "../../../models/ICredentials";
 import { useAppSelector, useAppDispatch } from "../../../hooks/redux";
 import { login, register } from "../../../store/reducers/ActionCreators";
 import { authSlice } from "../../../store/reducers/AuthSlice";
-interface SignFormProps {
-  pseudo?: boolean;
-}
+interface SignFormProps {}
 
-const SignForm: React.FC<SignFormProps> = ({ pseudo }) => {
+const SignForm: React.FC<SignFormProps> = () => {
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const { isError, isLoading, user } = useAppSelector(
+  const { isError, isLoading, token } = useAppSelector(
     (state) => state.authReducer
   );
   const [credentials, setCredentials] = React.useState<ICredentials>({
@@ -49,8 +47,8 @@ const SignForm: React.FC<SignFormProps> = ({ pseudo }) => {
           <p>{router.pathname === SIGNIN ? "Войти" : "Регистрация"}</p>
         </div>
 
-        <BaseInput
-          pseudo={pseudo ? 1 : 0}
+        <SignInput
+          pseudoStyleType={1}
           isError={isError}
           type="text"
           name="email"
@@ -58,8 +56,8 @@ const SignForm: React.FC<SignFormProps> = ({ pseudo }) => {
           value={credentials.email}
           onChange={handleChange}
         />
-        <BaseInput
-          pseudo={pseudo ? 2 : 0}
+        <SignInput
+          pseudoStyleType={2}
           isError={isError}
           type="password"
           name="password"
@@ -70,7 +68,7 @@ const SignForm: React.FC<SignFormProps> = ({ pseudo }) => {
         <BaseButton text="Подтвердить" />
       </form>
       <div className={styles.status}>
-        {isError && <div>error</div>}
+        {isError && <div>{isError}</div>}
         {isLoading && <div>loading</div>}
       </div>
     </div>

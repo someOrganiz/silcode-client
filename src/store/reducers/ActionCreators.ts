@@ -8,10 +8,19 @@ export const login =
     try {
       dispatch(authSlice.actions.authRequesting());
       const response = await auth(credentials, "/login");
-      if (response?.payload) {
-        dispatch(authSlice.actions.authRequestingError(response));
+      if (!response.ok) {
+        response
+          .json()
+          .then((res) =>
+            dispatch(authSlice.actions.authRequestingError(res?.message))
+          );
+      } else {
+        response
+          .json()
+          .then((res) =>
+            dispatch(authSlice.actions.authRequestingSuccess(res.atoken))
+          );
       }
-      dispatch(authSlice.actions.authRequestingSuccess(response));
     } catch (error: any) {
       dispatch(authSlice.actions.authRequestingError(error?.message));
     }
@@ -22,10 +31,18 @@ export const register =
     try {
       dispatch(authSlice.actions.authRequesting());
       const response = await auth(credentials, "/registration");
-      if (response?.statusCode) {
-        dispatch(authSlice.actions.authRequestingError(response));
+      if (!response.ok) {
+        response
+          .json()
+          .then((res) =>
+            dispatch(authSlice.actions.authRequestingError(res?.message))
+          );
       } else {
-        dispatch(authSlice.actions.authRequestingSuccess(response));
+        response
+          .json()
+          .then((res) =>
+            dispatch(authSlice.actions.authRequestingSuccess(res.atoken))
+          );
       }
     } catch (error: any) {
       dispatch(authSlice.actions.authRequestingError(error?.message));
@@ -41,6 +58,6 @@ async function auth(creds: ICredentials, endpoint: string) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(creds),
-  }).then((res) => res.json());
+  });
   return response;
 }

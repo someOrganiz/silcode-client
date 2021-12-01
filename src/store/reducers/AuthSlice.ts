@@ -1,24 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface AuthResponse {
-  payload: any;
-  type: string;
-}
-
-interface IUser {
-  role: string;
-  id: string;
-}
+type StrToken = string;
+type StrError = string;
 interface AuthState {
   isLoading: boolean;
-  isError: string;
-  user: IUser;
+  isError: StrError;
+  token: StrToken;
 }
 
 const initialState: AuthState = {
   isLoading: false,
   isError: "",
-  user: {} as IUser,
+  token: "",
 };
 
 export const authSlice = createSlice({
@@ -28,19 +21,19 @@ export const authSlice = createSlice({
     initialize(state) {
       state.isLoading = false;
       state.isError = "";
-      state.user = {} as IUser;
+      state.token = "";
     },
     authRequesting(state) {
       state.isLoading = true;
       state.isError = "";
     },
-    authRequestingSuccess(state, action: PayloadAction<AuthResponse>) {
-      // state.user = action.payload.user;
+    authRequestingSuccess(state, action: PayloadAction<StrToken>) {
+      state.token = action.payload;
       state.isLoading = false;
       state.isError = "";
     },
-    authRequestingError(state, action: PayloadAction<any>) {
-      // state.user = action.payload.user;
+    authRequestingError(state, action: PayloadAction<StrError>) {
+      state.token = "";
       state.isLoading = false;
       state.isError = action.payload;
     },

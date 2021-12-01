@@ -46,7 +46,6 @@ const CoursePython: React.FC<CoursePythonProps> = ({}) => {
               <h2>Python — самый простой язык для старта</h2>
             </div>
           </div>
-
           <div className={styles.descriptionCourseItemRight}>
             <div className={styles.descriptionCourseItemRightHeader}>
               <h2>Сильные стороны языка</h2>

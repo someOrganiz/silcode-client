@@ -1,4 +1,8 @@
-h2 {
+.descriptionCourseItemLeftHeader h2 {
+  color: #00c2cd;
+}
+
+.descriptionCourseItemRightHeader h2 {
   color: #00c2cd;
 }
 
@@ -41,7 +45,7 @@ h2 {
 
 .descriptionCourseItemRightHeader {
   font-size: 25px;
-  width: 450px;
+  width: 400px;
 }
 
 .descriptionCourseItemRightMain {

@@ -1,23 +1,15 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import styles from "../styles/Home.module.css";
-import { useRouter } from "next/router";
 
 import { useTranslation } from "../hooks/myHooks";
 import FHLayout from "../components/common/layouts/HFLayout";
-import { useAppSelector } from "../hooks/redux";
-import { userSlice } from "../store/reducers/UserSlice";
-import { useDispatch } from "react-redux";
-import HomeEntry from "../components/home/HomeEntry";
+import EntryWrapper from "../components/common/entry/EntryWrapper";
+import EntryTitle from "../components/common/entry/EntryTitle";
 
 export default function Home() {
   const t = useTranslation();
-  const [counter, setCounter] = useState(0);
-  const handleClick = () => {
-    setCounter(counter + 1);
-  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -27,7 +19,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <HomeEntry />
+        <EntryWrapper img="/HomePagePurple.webp" alt="blog entry image">
+          <EntryTitle text="ДОБРО ПОЖАЛОВАТЬ В SILCODE!" />
+        </EntryWrapper>
       </main>
     </div>
   );

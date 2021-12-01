@@ -6,7 +6,7 @@ import styles from "../styles/Sign.module.css";
 const SignUp = () => {
   return (
     <main className={styles.main}>
-      <SignForm pseudo={true} />
+      <SignForm />
     </main>
   );
 };

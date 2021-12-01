@@ -1,11 +1,14 @@
 import React, { ReactElement } from "react";
+import EntryTitle from "../components/common/entry/EntryTitle";
+import EntryWrapper from "../components/common/entry/EntryWrapper";
 import FHLayout from "../components/common/layouts/HFLayout";
-import CoursesEntry from "../components/courses/entry/CoursesEntry";
 
 const Courses = () => {
   return (
     <main>
-      <CoursesEntry />
+      <EntryWrapper img="/CoursesPageLangs.webp" alt="blog entry image">
+        <EntryTitle text="Лучшие курсы всегда рядом" />
+      </EntryWrapper>
     </main>
   );
 };

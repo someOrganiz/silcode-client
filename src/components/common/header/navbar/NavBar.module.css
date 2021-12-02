@@ -2,6 +2,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  transition: linear 1s;
 }
 
 .menuListItem {

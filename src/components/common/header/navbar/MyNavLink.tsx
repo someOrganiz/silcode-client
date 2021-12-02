@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { SIGNIN, SIGNUP } from "../../../../utils/routes";
+import { PROFILE, SIGNIN, SIGNUP } from "../../../../utils/routes";
 import styles from "./MyNavLink.module.css";
+import { useAppDispatch } from "../../../../hooks/redux";
+import { logout } from "../../../../store/reducers/ActionCreators";
 
 interface MyNavLinkProps {
   text: string;
@@ -12,7 +14,7 @@ interface MyNavLinkProps {
 const MyNavLink: React.FC<MyNavLinkProps> = ({ text, href }) => {
   const router = useRouter();
   let link, underline;
-  if (router.pathname == SIGNIN || router.pathname == SIGNUP) {
+  if ([SIGNIN, SIGNUP, PROFILE].indexOf(router.pathname) > -1) {
     link = styles.menuLinkBlack;
     underline = styles.underlineBlack;
   } else {

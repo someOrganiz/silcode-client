@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
-import EntryTitle from "../components/common/entry/EntryTitle";
-import EntryWrapper from "../components/common/entry/EntryWrapper";
-import FHLayout from "../components/common/layouts/HFLayout";
-import CourseList from "../components/courses/courseList/CourseList";
+import EntryTitle from "../../components/common/entry/EntryTitle";
+import EntryWrapper from "../../components/common/entry/EntryWrapper";
+import FHLayout from "../../components/common/layouts/HFLayout";
+import CourseList from "../../components/courses/courseList/CourseList";
 
 const Courses = () => {
   return (

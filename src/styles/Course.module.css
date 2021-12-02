@@ -1,0 +1,12 @@
+.spacer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 20vh;
+}
+
+.spacer h2 {
+  text-align: center;
+  font-size: 40px;
+}

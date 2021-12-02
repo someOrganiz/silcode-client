@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React, { SyntheticEvent } from "react";
-import { SIGNIN, SIGNUP } from "../../../../utils/routes";
+import { PROFILE, SIGNIN, SIGNUP } from "../../../../utils/routes";
 import styles from "./LocaleSelect.module.css";
 
 const LocaleSelect = () => {
@@ -8,7 +8,7 @@ const LocaleSelect = () => {
   const { locale } = router;
 
   let select;
-  if (router.pathname == SIGNIN || router.pathname == SIGNUP) {
+  if ([SIGNIN, SIGNUP, PROFILE].indexOf(router.pathname) > -1) {
     select = styles.selectkBlack;
   } else select = styles.select;
 

@@ -1,16 +1,18 @@
 import React from "react";
 import styles from "./CourseList.module.css";
 import CourseCard from "../courseCard/CourseCard";
+import { PYTHON } from "../../../utils/routes";
 
 const CourseList = () => {
   return (
     <div className={styles.courseList}>
       <div className={styles.courseListHeader}>
-        <h2>Наши программы обучения</h2>
+        <h2>Наши программы обучения: </h2>
       </div>
       <div className={styles.courseListing}>
         <CourseCard
-          tags={["Курс", "Программирование"]}
+          to={PYTHON}
+          tags={["Python"]}
           title={"Новичок в Python разработке"}
           date={"1 ноября 2021"}
           duration={"4 месяца"}
@@ -21,7 +23,8 @@ const CourseList = () => {
           alt={"Изображение к карточке о языке Python"}
         />
         <CourseCard
-          tags={["Курс", "Программирование"]}
+          to={PYTHON}
+          tags={["HTML", "CSS", "Figma", "Canva"]}
           title={"Верстка для начинающих"}
           date={"5 января 2022"}
           duration={"2 месяца"}
@@ -32,7 +35,8 @@ const CourseList = () => {
           alt={"Изображение к карточке о верстке"}
         />
         <CourseCard
-          tags={["Курс", "Программирование"]}
+          to={PYTHON}
+          tags={["Python", "Jupyter Notebook"]}
           title={"Новичок в Data Science"}
           date={"15 января 2022"}
           duration={"4 месяца"}

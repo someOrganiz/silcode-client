@@ -1,0 +1,96 @@
+.courseCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px;
+  cursor: pointer;
+  transition: linear 0.18s;
+  border-radius: 20px;
+  width: 340px;
+  box-shadow: 0px 4px 15px 2px rgba(34, 60, 80, 0.13);
+}
+
+.courseCard:hover {
+  transition: linear 0.15s;
+  transform: scale(1.05);
+
+  box-shadow: 0px 17px 15px 2px rgba(34, 60, 80, 0.25);
+}
+
+.headSectionText {
+  display: flex;
+  flex-direction: column;
+}
+
+.headsection {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.courseImg {
+  margin-top: 2px;
+  margin-left: 5px;
+  min-width: 51px;
+  max-height: 64px;
+}
+
+.course {
+  margin-left: 30px;
+}
+
+.courseListItem {
+  margin-right: 17px;
+}
+
+.courseLink {
+  font-weight: 700;
+  font-size: 14px;
+  color: #00c2cb;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+.courseLink:hover {
+  text-decoration: underline;
+}
+.courseTitle {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f0d0e;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.courseDateAuthor {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.courseDate {
+  font-size: 12px;
+  color: #888888;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.courseText {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #0f0d0e;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.courseText {
+  text-align: center;
+}

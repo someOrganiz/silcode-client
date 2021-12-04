@@ -9,7 +9,7 @@ interface AuthState {
 }
 
 const initialState: AuthState = {
-  isLoading: false,
+  isLoading: true,
   isError: "",
   token: "",
 };

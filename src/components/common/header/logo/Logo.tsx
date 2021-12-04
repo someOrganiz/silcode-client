@@ -5,7 +5,7 @@ import { HOME } from "../../../../utils/routes";
 
 const Logo = () => {
   return (
-    <div className={styles.logoContainer}>
+    <div className={styles.logoContainer} id="1">
       <Link href={HOME}>
         <a>
           <img

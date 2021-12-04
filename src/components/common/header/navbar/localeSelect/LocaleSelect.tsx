@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React, { SyntheticEvent } from "react";
-import { PROFILE, SIGNIN, SIGNUP } from "../../../../utils/routes";
+import { PROFILE, SIGNIN, SIGNUP } from "../../../../../utils/routes";
 import styles from "./LocaleSelect.module.css";
 
 const LocaleSelect = () => {
@@ -18,14 +18,20 @@ const LocaleSelect = () => {
   };
 
   return (
-    <select onChange={changeLanguage} defaultValue={locale} className={select}>
-      <option className={styles.option} value="ru">
-        RU
-      </option>
-      <option className={styles.option} value="en">
-        EN
-      </option>
-    </select>
+    <div className={styles.wrapper}>
+      <select
+        onChange={changeLanguage}
+        defaultValue={locale}
+        className={select}
+      >
+        <option className={styles.option} value="ru">
+          RU
+        </option>
+        <option className={styles.option} value="en">
+          EN
+        </option>
+      </select>
+    </div>
   );
 };
 

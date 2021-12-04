@@ -1,10 +1,14 @@
 import { ICredentials } from "../../models/ICredentials";
-import { AppDispatch } from "../store";
+import { AppDispatch, store } from "../store";
 import { authSlice } from "./AuthSlice";
-import { PROFILE } from "../../utils/routes";
+import { HOME, PROFILE } from "../../utils/routes";
 import router, { Router } from "next/router";
 
-const API_URL = "http://localhost:5000/auth";
+interface AuthResponse {
+  token: string;
+}
+
+export const API_URL = "http://localhost:5000/auth";
 
 export const login =
   (credentials: ICredentials) => async (dispatch: AppDispatch) => {
@@ -55,10 +59,12 @@ export const register =
 export const logout = () => async (dispatch: AppDispatch) => {
   localStorage.removeItem("atoken");
   dispatch(authSlice.actions.initialize());
+  router.push(HOME);
 };
 
 export const auth = () => async (dispatch: AppDispatch) => {
   dispatch(dispatch(authSlice.actions.authRequesting()));
+  // if (!store.getState().authReducer.token)
   try {
     const token = localStorage.getItem("atoken");
     if (!token) {
@@ -109,3 +115,16 @@ async function authRequest(token: string, endpoint: string) {
   });
   return response;
 }
+
+// async function authRequest(token: string, endpoint: string) {
+//   const response = await fetch(API_URL + endpoint, {
+//     method: "POST",
+//     mode: "cors",
+//     credentials: "include",
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: token,
+//     },
+//   });
+//   return response;
+// }

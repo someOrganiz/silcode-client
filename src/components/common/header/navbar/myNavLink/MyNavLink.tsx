@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { PROFILE, SIGNIN, SIGNUP } from "../../../../utils/routes";
+import { PROFILE, SIGNIN, SIGNUP, HOME } from "../../../../../utils/routes";
 import styles from "./MyNavLink.module.css";
-import { useAppDispatch } from "../../../../hooks/redux";
-import { logout } from "../../../../store/reducers/ActionCreators";
 
 interface MyNavLinkProps {
   text: string;
@@ -20,6 +18,9 @@ const MyNavLink: React.FC<MyNavLinkProps> = ({ text, href }) => {
   } else {
     link = styles.menuLink;
     underline = styles.underline;
+  }
+  if (router.pathname === HOME) {
+    underline = "";
   }
 
   return (

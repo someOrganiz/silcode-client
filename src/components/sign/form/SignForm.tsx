@@ -3,7 +3,7 @@ import BaseButton from "../../common/button/BaseButton";
 import SignInput from "../../common/input/SignInput";
 import styles from "./SignForm.module.css";
 import { useRouter } from "next/router";
-import { SIGNIN } from "../../../utils/routes";
+import { HOME, SIGNIN } from "../../../utils/routes";
 import { ICredentials } from "../../../models/ICredentials";
 import { useAppSelector, useAppDispatch } from "../../../hooks/redux";
 import { login, register } from "../../../store/reducers/ActionCreators";

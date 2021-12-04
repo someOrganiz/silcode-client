@@ -3,8 +3,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ReactElement, ReactNode } from "react";
 import { NextPage } from "next";
-import { createWrapper } from "next-redux-wrapper";
-import { setupStore } from "../store/store";
+import { store } from "../store/store";
 import { Provider } from "react-redux";
 
 type NextPageWithLayout = NextPage & {
@@ -14,8 +13,6 @@ type NextPageWithLayout = NextPage & {
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
-
-const store = setupStore();
 
 export default function MyApp({ Component, pageProps }: any) {
   const getLayout = Component.getLayout ?? ((page: NextPage) => page);

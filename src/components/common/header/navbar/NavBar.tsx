@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./NavBar.module.css";
-import Link from "next/link";
-import LocaleSelect from "./LocaleSelect";
+import LocaleSelect from "./localeSelect/LocaleSelect";
 import {
   COURSES,
   BLOG,
@@ -9,17 +8,15 @@ import {
   SIGNUP,
   ABOUT,
   PROFILE,
-  HOME,
 } from "../../../../utils/routes";
-import MyNavLink from "./MyNavLink";
+import MyNavLink from "./myNavLink/MyNavLink";
 import { useAppDispatch, useAppSelector } from "../../../../hooks/redux";
 import { auth, logout } from "../../../../store/reducers/ActionCreators";
-import { authSlice } from "../../../../store/reducers/AuthSlice";
+import { HOME } from "../../../../utils/routes";
 
 const NavBar = () => {
   const dispatch = useAppDispatch();
   const { isLoading, token } = useAppSelector((state) => state.authReducer);
-
   React.useEffect(() => {
     dispatch(auth());
   }, []);
@@ -37,7 +34,7 @@ const NavBar = () => {
             <>
               <MyNavLink href={PROFILE} text={"Профиль"} />
               <div onClick={(e) => dispatch(logout())}>
-                <MyNavLink href={""} text={"Выход"} />
+                <MyNavLink href={HOME} text={"Выход"} />
               </div>
             </>
           ) : (
@@ -55,4 +52,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default React.memo(NavBar);

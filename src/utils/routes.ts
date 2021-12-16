@@ -7,3 +7,5 @@ export const SIGNUP = "/signup";
 export const PROFILE = "/profile";
 
 export const PYTHON = "/courses/python";
+export const DSCIENCE = "/courses/dscience";
+export const HTMLWEB = "/courses/htmlweb";

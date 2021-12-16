@@ -3,57 +3,42 @@ import { AppDispatch, store } from "../store";
 import { authSlice } from "./AuthSlice";
 import { HOME, PROFILE } from "../../utils/routes";
 import router, { Router } from "next/router";
+import $apiAuth from "../../http/$apiAuth";
 
 interface AuthResponse {
   token: string;
 }
 
-export const API_URL = "http://localhost:5000/auth";
-
 export const login =
   (credentials: ICredentials) => async (dispatch: AppDispatch) => {
-    try {
-      dispatch(authSlice.actions.authRequesting());
-      const response = await signRequest(credentials, "/login");
-      if (!response.ok) {
-        response
-          .json()
-          .then((res) =>
-            dispatch(authSlice.actions.authRequestingError(res?.message))
-          );
-      } else {
-        response.json().then((res) => {
-          dispatch(authSlice.actions.authRequestingSuccess(res.atoken));
-          localStorage.setItem("atoken", res.atoken);
-          router.push(PROFILE);
-        });
-      }
-    } catch (error: any) {
-      dispatch(authSlice.actions.authRequestingError(error?.message));
-    }
+    dispatch(authSlice.actions.authRequesting());
+    const response = await $apiAuth
+      .post("/signin", { ...credentials })
+      .then((res) => {
+        console.log(res.data);
+        localStorage.setItem("atoken", res.data.atoken);
+        dispatch(authSlice.actions.authRequestingSuccess(res.data));
+      })
+      .catch((err) =>
+        dispatch(
+          authSlice.actions.authRequestingError(err?.response?.data?.message)
+        )
+      );
   };
 
 export const register =
   (credentials: ICredentials) => async (dispatch: AppDispatch) => {
-    try {
-      dispatch(authSlice.actions.authRequesting());
-      const response = await signRequest(credentials, "/registration");
-      if (!response.ok) {
-        response
-          .json()
-          .then((res) =>
-            dispatch(authSlice.actions.authRequestingError(res?.message))
-          );
-      } else {
-        response
-          .json()
-          .then((res) =>
-            dispatch(authSlice.actions.authRequestingSuccess(res.atoken))
-          );
-      }
-    } catch (error: any) {
-      dispatch(authSlice.actions.authRequestingError(error?.message));
-    }
+    dispatch(authSlice.actions.authRequesting());
+    const response = await $apiAuth
+      .post("/signup", { ...credentials })
+      .then((res) =>
+        dispatch(authSlice.actions.authRequestingSuccess(res.data))
+      )
+      .catch((err) =>
+        dispatch(
+          authSlice.actions.authRequestingError(err?.response?.data?.message)
+        )
+      );
   };
 
 export const logout = () => async (dispatch: AppDispatch) => {
@@ -63,68 +48,20 @@ export const logout = () => async (dispatch: AppDispatch) => {
 };
 
 export const auth = () => async (dispatch: AppDispatch) => {
-  dispatch(dispatch(authSlice.actions.authRequesting()));
-  // if (!store.getState().authReducer.token)
-  try {
-    const token = localStorage.getItem("atoken");
-    if (!token) {
-      dispatch(authSlice.actions.initialize());
-    } else {
-      dispatch(authSlice.actions.authRequesting());
-      const response = await authRequest(token, "/auth");
-      if (!response.ok) {
-        response
-          .json()
-          .then((res) =>
-            dispatch(authSlice.actions.authRequestingError(res.message))
-          );
-      } else {
-        response.json().then((res) => {
-          console.log(res);
-          dispatch(authSlice.actions.authRequestingSuccess(token));
-        });
-      }
-    }
-  } catch (error: any) {
-    dispatch(authSlice.actions.authRequestingError(error?.message));
+  dispatch(authSlice.actions.authRequesting());
+  const token = localStorage.getItem("atoken");
+  if (!token) {
+    dispatch(authSlice.actions.initialize());
+  } else {
+    const response = await $apiAuth
+      .post("/auth", { Headers: token })
+      .then((res) =>
+        dispatch(authSlice.actions.authRequestingSuccess(res.data))
+      )
+      .catch((err) =>
+        dispatch(
+          authSlice.actions.authRequestingError(err?.response?.data?.message)
+        )
+      );
   }
 };
-
-async function signRequest(creds: ICredentials, endpoint: string) {
-  const response = await fetch(API_URL + endpoint, {
-    method: "POST",
-    mode: "cors",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(creds),
-  });
-  return response;
-}
-
-async function authRequest(token: string, endpoint: string) {
-  const response = await fetch(API_URL + endpoint, {
-    method: "POST",
-    mode: "cors",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: token,
-    },
-  });
-  return response;
-}
-
-// async function authRequest(token: string, endpoint: string) {
-//   const response = await fetch(API_URL + endpoint, {
-//     method: "POST",
-//     mode: "cors",
-//     credentials: "include",
-//     headers: {
-//       "Content-Type": "application/json",
-//       Authorization: token,
-//     },
-//   });
-//   return response;
-// }

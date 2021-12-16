@@ -1,0 +1,41 @@
+.article h2 {
+  color: #00c2cd;
+}
+
+.article {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+
+.titleContainer {
+  margin-bottom: 20px;
+  width: 750px;
+  font-size: 28px;
+}
+
+.description {
+  width: 400px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.descriptionCourseItemRight {
+  text-align: start;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 400px;
+}
+
+.titlePros {
+  font-size: 25px;
+  width: 400px;
+}
+
+.descriptionCourseItemRightMain {
+  color: #ffffff;
+}

@@ -6,6 +6,11 @@ import { useTranslation } from "../hooks/myHooks";
 import FHLayout from "../components/common/layouts/HFLayout";
 import EntryWrapper from "../components/common/entry/EntryWrapper";
 import EntryTitle from "../components/common/entry/EntryTitle";
+import AdvantageSection from "../components/home/advantages/AdvantageSection";
+import HelpSection from "../components/home/help/HelpSection";
+import FactSection from "../components/home/facts/FactSection";
+import TrySection from "../components/home/try/TrySection";
+import TitleSpacer from "../components/common/spacer/TitleSpacer";
 
 export default function Home() {
   const t = useTranslation();
@@ -22,6 +27,11 @@ export default function Home() {
         <EntryWrapper img="/HomePagePurple.webp" alt="blog entry image">
           <EntryTitle text="ДОБРО ПОЖАЛОВАТЬ В SILCODE!" />
         </EntryWrapper>
+        <TitleSpacer title="О площадке: " />
+        <AdvantageSection />
+        <HelpSection />
+        {/* <FactSection /> */}
+        <TrySection />
       </main>
     </div>
   );

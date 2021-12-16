@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CourseList.module.css";
 import CourseCard from "../courseCard/CourseCard";
-import { PYTHON } from "../../../utils/routes";
+import { DSCIENCE, HTMLWEB, PYTHON } from "../../../utils/routes";
 
 const CourseList = () => {
   return (
@@ -23,7 +23,7 @@ const CourseList = () => {
           alt={"Изображение к карточке о языке Python"}
         />
         <CourseCard
-          to={PYTHON}
+          to={HTMLWEB}
           tags={["HTML", "CSS", "Figma", "Canva"]}
           title={"Верстка для начинающих"}
           date={"5 января 2022"}
@@ -35,7 +35,7 @@ const CourseList = () => {
           alt={"Изображение к карточке о верстке"}
         />
         <CourseCard
-          to={PYTHON}
+          to={DSCIENCE}
           tags={["Python", "Jupyter Notebook"]}
           title={"Новичок в Data Science"}
           date={"15 января 2022"}

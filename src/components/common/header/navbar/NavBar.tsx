@@ -15,6 +15,7 @@ import { auth, logout } from "../../../../store/reducers/ActionCreators";
 import { HOME } from "../../../../utils/routes";
 
 const NavBar = () => {
+  console.log("rendered");
   const dispatch = useAppDispatch();
   const { isLoading, token } = useAppSelector((state) => state.authReducer);
   React.useEffect(() => {
@@ -52,4 +53,4 @@ const NavBar = () => {
   );
 };
 
-export default React.memo(NavBar);
+export default NavBar;

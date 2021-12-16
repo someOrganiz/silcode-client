@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #ffffff;
   bottom: 0;
+  height: 160px;
 }
 .socialIcons {
   display: flex;

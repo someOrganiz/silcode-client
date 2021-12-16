@@ -1,0 +1,30 @@
+.textContainer {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.textContainer h4 {
+  margin-bottom: 20px;
+  width: 350px;
+  font-size: 19px;
+}
+
+.textContainer p {
+  width: 350px;
+  font-size: 17px;
+}
+
+.imgContainer img {
+  width: 40px;
+}
+
+.ability {
+  display: flex;
+  align-items: flex-start;
+
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

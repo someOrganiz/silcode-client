@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import FHLayout from "../components/common/layouts/HFLayout";
+import HFLayout from "../components/common/layouts/HFLayout";
 import BlogList from "../components/blog/container/BlogList";
 import BlogAside from "../components/blog/aside/BlogAside";
 import styles from "../styles/Blog.module.css";
@@ -21,5 +21,5 @@ export default function Blog() {
 }
 
 Blog.getLayout = function getLayout(page: ReactElement) {
-  return <FHLayout>{page}</FHLayout>;
+  return <HFLayout>{page}</HFLayout>;
 };

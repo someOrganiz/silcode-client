@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 
 import styles from "../styles/Home.module.css";
 import { useTranslation } from "../hooks/myHooks";
-import FHLayout from "../components/common/layouts/HFLayout";
+import HFLayout from "../components/common/layouts/HFLayout";
 import Description from "../components/about/description/Description";
 import EntryWrapper from "../components/common/entry/EntryWrapper";
 import EntryTitle from "../components/common/entry/EntryTitle";
@@ -21,5 +21,5 @@ export default function About() {
 }
 
 About.getLayout = function getLayout(page: ReactElement) {
-  return <FHLayout>{page}</FHLayout>;
+  return <HFLayout>{page}</HFLayout>;
 };

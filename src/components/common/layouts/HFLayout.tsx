@@ -2,8 +2,7 @@ import React, { ReactNode } from "react";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
-
-const FHLayout = ({ children }: any) => {
+const HFLayout = ({ children }: any) => {
   return (
     <>
       <Header />
@@ -13,4 +12,4 @@ const FHLayout = ({ children }: any) => {
   );
 };
 
-export default FHLayout;
+export default HFLayout;

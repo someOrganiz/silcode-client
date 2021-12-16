@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 import styles from "../styles/Home.module.css";
 
 import { useTranslation } from "../hooks/myHooks";
-import FHLayout from "../components/common/layouts/HFLayout";
+import HFLayout from "../components/common/layouts/HFLayout";
 import EntryWrapper from "../components/common/entry/EntryWrapper";
 import EntryTitle from "../components/common/entry/EntryTitle";
 import AdvantageSection from "../components/home/advantages/AdvantageSection";
@@ -38,5 +38,5 @@ export default function Home() {
 }
 
 Home.getLayout = function getLayout(page: ReactElement) {
-  return <FHLayout>{page}</FHLayout>;
+  return <HFLayout>{page}</HFLayout>;
 };

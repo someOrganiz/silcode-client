@@ -1,10 +1,11 @@
 import React, { ReactElement } from "react";
 import EntryTitle from "../../components/common/entry/EntryTitle";
 import EntryWrapper from "../../components/common/entry/EntryWrapper";
-import FHLayout from "../../components/common/layouts/HFLayout";
+import HFLayout from "../../components/common/layouts/HFLayout";
 import CourseDescription from "../../components/courses/description/CourseDescription";
 import styles from "../../styles/Course.module.css";
 import TitleSpacer from "../../components/common/spacer/TitleSpacer";
+import Abilities from "../../components/courses/abilities/Abilities";
 
 export default function Python() {
   return (
@@ -34,10 +35,11 @@ export default function Python() {
         title2="Python — самый простой язык для старта"
         titlePros="Сильные стороны языка"
       />
+      <Abilities />
     </main>
   );
 }
 
 Python.getLayout = function getLayout(page: ReactElement) {
-  return <FHLayout>{page}</FHLayout>;
+  return <HFLayout>{page}</HFLayout>;
 };

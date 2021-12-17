@@ -1,0 +1,19 @@
+.suitable {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.textContainer {
+  margin-bottom: 20px;
+  width: 450px;
+  font-size: 22px;
+}
+
+.imgContainer img {
+  width: 150px;
+}

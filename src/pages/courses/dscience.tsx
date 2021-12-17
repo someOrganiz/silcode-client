@@ -4,8 +4,9 @@ import EntryWrapper from "../../components/common/entry/EntryWrapper";
 import HFLayout from "../../components/common/layouts/HFLayout";
 import TitleSpacer from "../../components/common/spacer/TitleSpacer";
 import CourseDescription from "../../components/courses/description/CourseDescription";
-import styles from "../../components/courses/abilities/Abilities.module.css";
+import styles from "../../styles/Course.module.css";
 import Ability from "../../components/courses/abilities/ability/Ability";
+import Suitable from "../../components/courses/suit/Suitable";
 
 export default function DScience() {
   return (
@@ -63,6 +64,27 @@ export default function DScience() {
             p1={
               "Задачи классификации, регрессии и кластеризации. Отбор и селекция признаков. Валидация данных. Оптимизация гиперпараметров и улучшение качества модели."
             }
+          />
+        </div>
+      </div>
+
+      <div className={styles.suitables}>
+        <h2>Кому подойдет курс?</h2>
+        <div className={styles.container}>
+          <Suitable
+            image="https://248006.selcdn.ru/LandGen/desktop_2_3b9ecd1df00039e329fa8bb42353ae945e34bcae.webp"
+            title="Новичкам"
+            p1="С нуля освоите Python, SQL, научитесь собирать и анализировать данные, получите необходимый теоретический минимум по математике, теории вероятности и статистике. Знания закрепите на практике — решите задачи на основе реальных кейсов."
+          />
+          <Suitable
+            image="https://248006.selcdn.ru/LandGen/desktop_2_5e672af2a4b64969b0586e18796e857129919880.webp"
+            title="Начинающим программистам"
+            p1="Подтянете математику, статистику, аналитическое и алгоритмическое мышление, научитесь выявлять потребности бизнеса. Получите опыт работы с моделями машинного обучения, будете применять Python для решения задач с данными."
+          />
+          <Suitable
+            image="https://248006.selcdn.ru/LandGen/desktop_2_c2ce682107ea8965004d75b1ebcee50999d287b5.webp"
+            title="Начинающим аналитикам"
+            p1="Вы научитесь выдвигать гипотезы и делать выводы на основе данных. Сможете писать эффективный код на Python, превращать сырые данные в полезную информацию для компании, понимать математику на основе статистики, обучать машины и прогнозировать результаты."
           />
         </div>
       </div>

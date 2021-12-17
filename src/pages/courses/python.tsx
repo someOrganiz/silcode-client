@@ -3,9 +3,10 @@ import EntryTitle from "../../components/common/entry/EntryTitle";
 import EntryWrapper from "../../components/common/entry/EntryWrapper";
 import HFLayout from "../../components/common/layouts/HFLayout";
 import CourseDescription from "../../components/courses/description/CourseDescription";
-import styles from "../../styles/Course.module.css";
 import TitleSpacer from "../../components/common/spacer/TitleSpacer";
 import Abilities from "../../components/courses/abilities/Abilities";
+import styles from "../../components/courses/abilities/Abilities.module.css";
+import Ability from "../../components/courses/abilities/ability/Ability";
 
 export default function Python() {
   return (
@@ -35,7 +36,45 @@ export default function Python() {
         title2="Python — самый простой язык для старта"
         titlePros="Сильные стороны языка"
       />
-      <Abilities />
+
+      <div className={styles.abilities}>
+        <h2>Чему вы научитесь?</h2>
+        <div className={styles.container}>
+          <Ability
+            title={"Тем, кто хочет начать программировать"}
+            p1={
+              "Мы подготовили упражнения для начинающих, которые помогут собственными руками написать первые строчки кода и увидеть, как они работают"
+            }
+          />
+          <Ability
+            title={"Понимать алгоритмы и структуры данных"}
+            p1={
+              "Изучите основные алгоритмы и структуры данных и научитесь их реализовывать в Python. Узнаете, как оценивать сложность алгоритмов"
+            }
+          />
+
+          <Ability
+            title={"Создавать программы на Python"}
+            p1={
+              "Научитесь создавать программы на Python в разных стилях: императивном, объектном и функциональном."
+            }
+          />
+
+          <Ability
+            title={"Работать с сетью"}
+            p1={"Поймёте, как устроено клиент-серверное взаимодействие"}
+          />
+
+          <Ability
+            title={"Тестировать код"}
+            p1={
+              "Освоите методы отладки и тестирования — сможете находить и исправлять ошибки в своём или чужом коде"
+            }
+          />
+        </div>
+      </div>
+
+      {/* <Abilities /> */}
     </main>
   );
 }

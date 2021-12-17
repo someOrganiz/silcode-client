@@ -30,16 +30,14 @@ const CourseCard: React.FC<CourseCardProps> = ({
           <img className={styles.courseImg} src={img} alt={alt} />
 
           <div className={styles.headSectionText}>
-            <div className={styles.course}>
-              <ul className={styles.list}>
-                {tags.map((tag) => (
-                  <li className={styles.courseListItem} key={tag}>
-                    <div className={styles.courseLink}>{tag}</div>
-                  </li>
-                ))}
-              </ul>
-              <h2 className={styles.courseTitle}>{title}</h2>
-            </div>
+            <ul className={styles.list}>
+              {tags.map((tag) => (
+                <li className={styles.courseListItem} key={tag}>
+                  <div className={styles.courseLink}>{tag}</div>
+                </li>
+              ))}
+            </ul>
+            <h2 className={styles.courseTitle}>{title}</h2>
           </div>
         </div>
 

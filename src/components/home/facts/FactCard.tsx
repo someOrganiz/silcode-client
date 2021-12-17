@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut, Bubble } from "react-chartjs-2";
 import styles from "./FactCard.module.css";
 
 interface CardProps {
@@ -22,12 +22,12 @@ const FactCard: FC<CardProps> = ({ percent, text }) => {
     <div className={styles.main}>
       <div className={styles.container}>
         <div className={styles.canvas}>
-          <Doughnut
+          {/* <Doughnut
             data={chartdata}
             options={{
               events: [],
             }}
-          />
+          /> */}
           <div className={styles.textContainer}>
             <p>{`${percent}%`}</p>
           </div>

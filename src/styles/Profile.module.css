@@ -2,13 +2,24 @@
   height: calc(100vh - 160px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   position: relative;
+}
+
+.main p {
+  margin: 0;
 }
 
 .container {
   margin-top: 40px;
   width: 100%;
   max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.headerSpacer {
+  min-height: 255px;
+  width: 100%;
 }

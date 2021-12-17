@@ -5,6 +5,7 @@ import styles from "../../styles/Profile.module.css";
 const Settings = () => {
   return (
     <main className={styles.main}>
+      <div className={styles.headerSpacer}></div>
       <div>My settings!!!!1</div>
     </main>
   );

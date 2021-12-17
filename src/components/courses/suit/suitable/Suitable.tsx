@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Suitable.module.css";
 
-interface SuitableProps {
+export interface SuitableProps {
   title: string;
   p1: string;
   image: string;

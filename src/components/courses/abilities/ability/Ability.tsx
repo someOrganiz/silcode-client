@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Ability.module.css";
 
-interface AbilityProps {
+export interface AbilityProps {
   title: string;
   p1: string;
 }

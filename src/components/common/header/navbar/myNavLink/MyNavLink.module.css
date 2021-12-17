@@ -23,7 +23,7 @@
 .menuListItem:hover {
   transition: linear 0.3s;
   transition: linear 0.15s;
-  transform: scale(1.2);
+  transform: scale(1.13);
 }
 
 .underline {

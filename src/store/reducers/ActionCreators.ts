@@ -17,6 +17,7 @@ export const login =
       .then((res) => {
         console.log(res.data);
         localStorage.setItem("atoken", res.data.atoken);
+        router.push(PROFILE);
         dispatch(authSlice.actions.authRequestingSuccess(res.data));
       })
       .catch((err) =>

@@ -1,7 +1,14 @@
 .main {
   height: calc(100vh - 160px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.container {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1200px;
 }

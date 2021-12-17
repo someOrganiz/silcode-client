@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { PROFILE, SIGNIN, SIGNUP, HOME } from "../../../../../utils/routes";
+import {
+  PROFILE,
+  SIGNIN,
+  SIGNUP,
+  HOME,
+  TRIPS,
+  SETTINGS,
+} from "../../../../../utils/routes";
 import styles from "./MyNavLink.module.css";
 
 interface MyNavLinkProps {
@@ -12,7 +19,9 @@ interface MyNavLinkProps {
 const MyNavLink: React.FC<MyNavLinkProps> = ({ text, href }) => {
   const router = useRouter();
   let link, underline;
-  if ([SIGNIN, SIGNUP, PROFILE].indexOf(router.pathname) > -1) {
+  if (
+    [SIGNIN, SIGNUP, PROFILE, SETTINGS, TRIPS].indexOf(router.pathname) > -1
+  ) {
     link = styles.menuLinkBlack;
     underline = styles.underlineBlack;
   } else {

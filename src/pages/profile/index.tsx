@@ -3,14 +3,11 @@ import styles from "../../styles/Profile.module.css";
 import CourseCard from "../../components/courses/courseCard/CourseCard";
 import { PYTHON } from "../../utils/routes";
 import HFLayout from "../../components/common/layouts/HFLayout";
-import ProfileNav from "../../components/profile/ProfileNav";
-import ProfileLayout from "../../components/common/layouts/ProfileLayout";
 
 const Profile = () => {
   return (
     <main className={styles.main}>
-      {/* <ProfileNav /> */}
-
+      <p>Здесь отображаются ваши купленные курсы</p>
       <div className={styles.container}>
         <div>
           <CourseCard
@@ -27,21 +24,6 @@ const Profile = () => {
           />
         </div>
       </div>
-      {/* <div>
-        <h2>My trips!</h2>
-        <CourseCard
-          to={PYTHON}
-          tags={["Amazon"]}
-          title={"Стажировка в компании Amazon"}
-          date={"2 января в 2024"}
-          duration={"4 месяца"}
-          description={`Стажировка по специальности аналитик данных в подразделение amazon cloud`}
-          img={
-            "https://cdn3.iconfinder.com/data/icons/cute-flat-social-media-icons-3/512/amazon.png"
-          }
-          alt={"amazon icon"}
-        />
-      </div> */}
     </main>
   );
 };
@@ -49,5 +31,5 @@ const Profile = () => {
 export default Profile;
 
 Profile.getLayout = function getLayout(page: ReactElement) {
-  return <ProfileLayout>{page}</ProfileLayout>;
+  return <HFLayout>{page}</HFLayout>;
 };

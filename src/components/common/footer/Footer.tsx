@@ -20,7 +20,8 @@ const Footer = () => {
                 "https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png"
               }
               alt={"YouTube"}
-              href={"https://www.youtube.com/channel/UCBc43bzRW7Bn14jlQD10K9A"}
+              href={""}
+              // href={"https://www.youtube.com/channel/UCBc43bzRW7Bn14jlQD10K9A"}
             />
             <SocialIcon
               img={

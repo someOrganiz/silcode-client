@@ -1,14 +1,26 @@
 .nav {
-  position: absolute;
+  /* position: absolute; */
   z-index: 2;
   width: 100%;
   padding: 30px;
+  max-width: 1250px;
 }
 
 .list {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   text-decoration: none;
+  padding: 0 30px 0 30px;
+  height: 60px;
+
+  background-color: rgba(238, 238, 238, 0.5);
+  border-radius: 5px;
+  transition: linear 1s;
+}
+
+.list li {
+  transition: linear 0.3s;
+  height: 30px;
 }

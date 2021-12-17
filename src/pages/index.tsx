@@ -30,7 +30,7 @@ export default function Home() {
         <TitleSpacer title="О площадке: " />
         <AdvantageSection />
         <HelpSection />
-        <FactSection />
+        {/* <FactSection /> */}
         <TrySection />
       </main>
     </div>

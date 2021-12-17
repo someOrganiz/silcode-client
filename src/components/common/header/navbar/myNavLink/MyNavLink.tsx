@@ -8,6 +8,7 @@ import {
   HOME,
   TRIPS,
   SETTINGS,
+  PYLEARNING,
 } from "../../../../../utils/routes";
 import styles from "./MyNavLink.module.css";
 
@@ -20,7 +21,9 @@ const MyNavLink: React.FC<MyNavLinkProps> = ({ text, href }) => {
   const router = useRouter();
   let link, underline;
   if (
-    [SIGNIN, SIGNUP, PROFILE, SETTINGS, TRIPS].indexOf(router.pathname) > -1
+    [SIGNIN, SIGNUP, PROFILE, SETTINGS, TRIPS, PYLEARNING].indexOf(
+      router.pathname
+    ) > -1
   ) {
     link = styles.menuLinkBlack;
     underline = styles.underlineBlack;

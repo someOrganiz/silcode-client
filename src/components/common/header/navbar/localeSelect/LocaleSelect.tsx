@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React, { SyntheticEvent } from "react";
 import {
   PROFILE,
+  PYLEARNING,
   SETTINGS,
   SIGNIN,
   SIGNUP,
@@ -15,7 +16,9 @@ const LocaleSelect = () => {
 
   let select;
   if (
-    [SIGNIN, SIGNUP, PROFILE, SETTINGS, TRIPS].indexOf(router.pathname) > -1
+    [SIGNIN, SIGNUP, PROFILE, SETTINGS, TRIPS, PYLEARNING].indexOf(
+      router.pathname
+    ) > -1
   ) {
     select = styles.selectkBlack;
   } else select = styles.select;

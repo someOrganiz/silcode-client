@@ -1,11 +1,11 @@
 import React, { ReactElement } from "react";
-import EntryTitle from "../../components/common/entry/EntryTitle";
-import EntryWrapper from "../../components/common/entry/EntryWrapper";
-import HFLayout from "../../components/common/layouts/HFLayout";
-import CourseDescription from "../../components/courses/description/CourseDescription";
-import TitleSpacer from "../../components/common/spacer/TitleSpacer";
-import Suitables from "../../components/courses/suit/Suitables";
-import Abilities from "../../components/courses/abilities/Abilities";
+import EntryTitle from "../../../components/common/entry/EntryTitle";
+import EntryWrapper from "../../../components/common/entry/EntryWrapper";
+import HFLayout from "../../../components/common/layouts/HFLayout";
+import CourseDescription from "../../../components/courses/description/CourseDescription";
+import TitleSpacer from "../../../components/common/spacer/TitleSpacer";
+import Suitables from "../../../components/courses/suit/Suitables";
+import Abilities from "../../../components/courses/abilities/Abilities";
 
 export default function Python() {
   return (

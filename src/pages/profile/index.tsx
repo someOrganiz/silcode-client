@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import styles from "../../styles/Profile.module.css";
 import CourseCard from "../../components/courses/courseCard/CourseCard";
-import { PYTHON, COURSES } from "../../utils/routes";
+import { PYTHON, COURSES, PYLEARNING } from "../../utils/routes";
 import HFLayout from "../../components/common/layouts/HFLayout";
 import CourseAddCard from "../../components/courses/courseCard/CourseAddCard";
 
@@ -12,7 +12,7 @@ const Profile = () => {
       <p>Здесь отображаются ваши купленные курсы</p>
       <div className={styles.container}>
         <CourseCard
-          to={PYTHON}
+          to={PYLEARNING}
           tags={["Python"]}
           title={"Новичок в Python разработке"}
           date={"1 ноября 2021"}

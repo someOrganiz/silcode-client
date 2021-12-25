@@ -4,9 +4,9 @@ import HelpCard from "./HelpCard";
 
 const HelpSection: FC = () => {
   return (
-    <section className={styles.main}>
+    <section className={styles.section}>
       <h2>Мы поможем вам учиться более эффективно</h2>
-      <p>
+      <p className={styles.descr}>
         Мы предлагаем вам полную свободу действий для создания лучших проектных
         решений
       </p>

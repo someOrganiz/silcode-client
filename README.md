@@ -1,3 +1,8 @@
+## SILCODE educational platform
+Actually, it is just simple study project.
+
+Deployed here https://silcode-client-ihc8t5pg1-silcode.vercel.app/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
